@@ -33,7 +33,7 @@ Website ini dibuat **statis** agar ringan, cepat, dan mudah di-deploy ke **GitHu
 
 <div align="center">
 
-<img src="assets/img/my_app_background.jpg" alt="Galaxy Planet Link Hub Preview" width="85%">
+<img src="assets/img/my_app.jpg" alt="Galaxy Planet Link Hub Preview" width="85%">
 
 <br><br>
 
