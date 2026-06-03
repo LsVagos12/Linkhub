@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Official galaxy planet link hub YOHANES A P — WhatsApp, Instagram, YouTube, TikTok, Discord, and dynamic music themes." />
+    <meta name="theme-color" content="#111827" />
+    <meta property="og:title" content="YOHANES A P — Galaxy Link Hub" />
+    <meta property="og:description" content="Stay connected through social links, selected music, and an interactive galaxy planet experience." />
+    <meta property="og:image" content="assets/img/logo.jpg" />
+    <title>YOHANES A P — Galaxy Link Hub</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <canvas id="ambientCanvas" aria-hidden="true"></canvas>
+    <div class="noise" aria-hidden="true"></div>
+    <div class="theme-orb orb-one" aria-hidden="true"></div>
+    <div class="theme-orb orb-two" aria-hidden="true"></div>
+    <div class="page-bg" aria-hidden="true">
+      <img src="assets/img/my_app_background.jpg" alt="" />
+      <span class="bg-overlay"></span>
+    </div>
+
+    <main class="shell">
+      <section class="hero-card" aria-label="Profile card">
+        <div class="hero-topbar">
+          <span><span class="status-dot"></span>Online Link Hub</span>
+          <button class="icon-btn" id="themeToggle" type="button" aria-label="Switch theme">
+            <i class="fa-solid fa-wand-magic-sparkles"></i>
+          </button>
+        </div>
+
+        <div class="profile-grid">
+          <div class="avatar-wrap">
+            <img src="assets/img/logo.jpg" alt="Foto profil Yohanes A P" class="avatar" />
+            <span class="avatar-ring"></span>
+          </div>
+
+          <div class="profile-copy">
+            <p class="eyebrow">LS Vagos Network</p>
+            <h1>YOHANES A P</h1>
+            <p class="tagline">Never die. Stay connected, stay inspired.</p>
+          </div>
+        </div>
+
+        <div class="hero-actions">
+          <a class="primary-cta" href="https://wa.me/6282231533780" target="_blank" rel="noopener">
+            <i class="fa-brands fa-whatsapp"></i>
+            Chat WhatsApp
+          </a>
+          <button class="secondary-cta" id="copyLink" type="button">
+            <i class="fa-regular fa-copy"></i>
+            Copy Link
+          </button>
+        </div>
+      </section>
+
+      <section class="links-panel" aria-label="Social links">
+        <div class="section-heading">
+          <span>Explore</span>
+          <small>Tap one to connect</small>
+        </div>
+
+        <div class="link-list">
+          <a class="social-card whatsapp" href="https://wa.me/6282231533780" target="_blank" rel="noopener">
+            <span class="link-icon"><i class="fa-brands fa-whatsapp"></i></span>
+            <span class="link-text"><strong>WhatsApp</strong><small>Fast response & direct contact</small></span>
+            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+          </a>
+
+          <a class="social-card instagram" href="https://instagram.com/los.vagos_12" target="_blank" rel="noopener">
+            <span class="link-icon"><i class="fa-brands fa-instagram"></i></span>
+            <span class="link-text"><strong>Instagram</strong><small>Photos, updates, and daily stories</small></span>
+            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+          </a>
+
+          <a class="social-card youtube" href="https://youtube.com/@evoluciongaming7729" target="_blank" rel="noopener">
+            <span class="link-icon"><i class="fa-brands fa-youtube"></i></span>
+            <span class="link-text"><strong>YouTube</strong><small>Gaming content and videos</small></span>
+            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+          </a>
+
+          <a class="social-card tiktok" href="https://tiktok.com/@username" target="_blank" rel="noopener">
+            <span class="link-icon"><i class="fa-brands fa-tiktok"></i></span>
+            <span class="link-text"><strong>TikTok</strong><small>Short clips and edits</small></span>
+            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+          </a>
+
+          <a class="social-card discord" href="https://discord.gg/p9P9bjb7MA" target="_blank" rel="noopener">
+            <span class="link-icon"><i class="fa-brands fa-discord"></i></span>
+            <span class="link-text"><strong>Discord</strong><small>Join the community room</small></span>
+            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+          </a>
+        </div>
+      </section>
+
+      <aside class="music-panel" aria-label="Music player">
+        <div class="album-card">
+          <img src="assets/img/YT.png" alt="Playlist cover" />
+          <div class="equalizer" id="equalizer" aria-hidden="true">
+            <span></span><span></span><span></span><span></span>
+          </div>
+          <div class="theme-chip" id="themeChip">Cinematic Violet</div>
+        </div>
+
+        <div class="music-copy">
+          <span class="eyebrow">Now playing</span>
+          <h2 id="trackTitle">Intense Love OST</h2>
+          <p id="lyricsText">Music is ready to play.</p>
+        </div>
+
+        <div class="theme-preview" aria-label="Current music theme colors">
+          <span></span><span></span><span></span>
+          <small id="themeMood">Soft cinematic mood</small>
+        </div>
+
+        <select id="playlist" aria-label="Select playlist track">
+          <option value="Ost. Intense Love - Waiting For Me [Monkey ft. Li RuoXi] 2020.mp3">Intense Love OST</option>
+          <option value="NUMERA UNO ANTHEM  - Prod. By KANG GAYANG (Official Music Video).mp3">NUMERA UNO ANTHEM</option>
+          <option value="Tada Koe Hitotsu - the voice r#U1d07mix (1).mp3">Tada Koe Hitotsu</option>
+          <option value="eminem - stan lofi remix (slowed  reverb).mp3">Eminem - Stan Lofi</option>
+          <option value="Way Back Home.mp3">Way Back Home</option>
+          <option value="#U300cAS ~ Nightcore#U300d~ That Girl ~.mp3">That Girl - Nightcore</option>
+        </select>
+
+        <div class="player-row">
+          <button id="musicBtn" class="round-btn" type="button" aria-label="Play or pause music">
+            <i class="fa-solid fa-play"></i>
+          </button>
+          <input type="range" id="volumeSlider" min="0" max="1" step="0.01" value="0.5" aria-label="Music volume" />
+        </div>
+
+        <audio id="bgMusic" src="assets/audio/Ost. Intense Love - Waiting For Me [Monkey ft. Li RuoXi] 2020.mp3" loop preload="metadata"></audio>
+      </aside>
+
+      <section class="qr-panel" aria-label="WhatsApp QR code">
+        <div>
+          <span class="eyebrow">Quick access</span>
+          <h2>Scan WhatsApp</h2>
+          <p>Open chat faster from another device.</p>
+        </div>
+        <img src="https://api.qrserver.com/v1/create-qr-code/?data=https://wa.me/6282231533780&size=160x160" alt="QR code WhatsApp" />
+      </section>
+    </main>
+
+    <div class="toast" id="toast" role="status" aria-live="polite">Link copied.</div>
+
+    <footer class="footer">
+      <span>© 2026 JimLoser</span>
+      <span>Theme changes with every song</span>
+    </footer>
+
+    <script src="java.js"></script>
+  </body>
+</html>
