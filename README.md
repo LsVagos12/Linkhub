@@ -31,8 +31,6 @@ Website ini dibuat **statis** agar ringan, cepat, dan mudah di-deploy ke **GitHu
 
 ## 🖼️ Preview
 
-> Tambahkan screenshot asli website kamu ke folder `assets/img/`, lalu ganti nama file preview di bawah ini.
-
 <div align="center">
 
 <img src="assets/img/my_app_background.jpg" alt="Galaxy Planet Link Hub Preview" width="85%">
@@ -101,83 +99,6 @@ Alasan tidak memakai framework berat:
 ├── .gitignore
 └── .nojekyll
 ```
-
----
-
-## 💻 Run Locally
-
-Cara paling mudah:
-
-```text
-Buka file index.html langsung di browser.
-```
-
-Cara yang lebih aman menggunakan local server:
-
-```bash
-python -m http.server 5500
-```
-
-Lalu buka:
-
-```text
-http://localhost:5500
-```
-
----
-
-## 📤 Push to GitHub
-
-```bash
-git init
-git add .
-git commit -m "Create galaxy planet link hub"
-git branch -M main
-git remote add origin https://github.com/USERNAME/NAMA-REPO.git
-git push -u origin main
-```
-
-Ganti bagian ini:
-
-```text
-USERNAME   → username GitHub kamu
-NAMA-REPO  → nama repository kamu
-```
-
----
-
-## 🌐 Deploy to GitHub Pages
-
-Buka repository GitHub kamu, lalu masuk ke:
-
-```text
-Settings → Pages → Deploy from branch → main → /root → Save
-```
-
-Setelah aktif, website bisa diakses melalui:
-
-```text
-https://USERNAME.github.io/NAMA-REPO/
-```
-
----
-
-## ▲ Deploy to Vercel
-
-Alternatif deploy yang juga bisa kamu pakai:
-
-```text
-Vercel → Add New Project → Import GitHub Repository → Deploy
-```
-
-Vercel akan otomatis membuat link seperti:
-
-```text
-https://nama-project.vercel.app
-```
-
-Setiap kamu push perubahan ke GitHub, Vercel akan otomatis melakukan redeploy.
-
 ---
 
 ## 🔗 Edit Social Media Links
@@ -243,28 +164,6 @@ Contoh konsep tema:
 
 ---
 
-## ⚡ Performance Notes
-
-Agar website lebih cepat:
-
-- Kompres gambar ke format `.webp`.
-- Kompres audio agar ukuran file tidak terlalu besar.
-- Hindari terlalu banyak file audio besar.
-- Gunakan gambar preview yang ringan.
-- Pastikan semua asset ada di folder `assets`.
-
----
-
-## ⚠️ Deployment Notes
-
-- Jangan hapus file `.nojekyll`.
-- Pastikan folder `assets/img` ikut ter-upload.
-- Pastikan folder `assets/audio` ikut ter-upload.
-- Jika audio tidak jalan, cek nama file dan path di `java.js`.
-- Jika gambar tidak muncul, cek huruf besar/kecil pada nama file.
-
----
-
 ## 🧩 Future Upgrade Ideas
 
 Beberapa ide pengembangan berikutnya:
@@ -278,28 +177,6 @@ Beberapa ide pengembangan berikutnya:
 - Custom domain.
 - Analytics sederhana.
 - Preview GIF animasi galaxy background.
-
----
-
-## 📸 Recommended Screenshot Setup
-
-Supaya README terlihat lebih profesional, buat screenshot:
-
-```text
-assets/img/preview-desktop.png
-assets/img/preview-mobile.png
-assets/img/preview-music-theme.gif
-```
-
-Lalu ganti bagian preview menjadi:
-
-```md
-<img src="assets/img/preview-desktop.png" width="85%">
-<img src="assets/img/preview-mobile.png" width="35%">
-<img src="assets/img/preview-music-theme.gif" width="85%">
-```
-
----
 
 ## 📄 License
 
